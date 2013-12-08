@@ -18,11 +18,18 @@ class XenBridge {
         require($lib . '/XenForo/Autoloader.php');
         
         XenForo_Autoloader::getInstance()->setupAutoloader($lib);
+        
+        /* Xenforo Application'a statik değişken atandı ve exception atamasına kontrol kondu */
+        XenForo_Application::$disableHandleException = true;
+        
         XenForo_Application::initialize($lib, $_SERVER['DOCUMENT_ROOT']);
         XenForo_Application::disablePhpErrorHandler();
-
+        
+       
+        
         if (Config::get('XenBridge::config.autoLogin'))
             XenForo_Session::startPublicSession();
+        
 
     }
 
