@@ -36,6 +36,12 @@ $config['cookie'] = array(
 ```
 Xenforo'nun config dosyasına bu kodu ekleyiniz (l4.dev domain adresiniz)
 
+**Test Örneği**
 
-
-
+```php
+Route::get('/', function()
+{
+    $ins = XenForo_Visitor::getInstance();
+    var_dump($ins);
+});
+```
