@@ -1,10 +1,9 @@
 XenBridge nedir ?
 =====================
 
-
 Xenforo kütüphanelerini Laravel 4 üzerinde kullanmanızı sağlayan ve Xenforo oturumlarını otomatik aktarabilen küçük bir pakettir.
-----------
 
+----------
 
 Kurulum
 ---------
