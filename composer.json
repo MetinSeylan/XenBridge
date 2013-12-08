@@ -1,6 +1,8 @@
 {
     "name": "metinseylan/xenbridge",
-    "description": "",
+    "description": "Laravel 4 icin Xenforo entegrasyonu",
+    "keywords": ["laravel", "laravel4", "xenforo", "xenforo forum", "forum"],
+    "type": "library",
     "authors": [
         {
             "name": "Metin Seylan",
