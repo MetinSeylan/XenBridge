@@ -14,7 +14,7 @@ class XenBridge {
 
         $lib = $_SERVER['DOCUMENT_ROOT'] . '/' . Config::get('XenBridge::config.xenforoFolder') . '/library';
         require($lib . '/XenForo/Autoloader.php');
-
+        
         XenForo_Autoloader::getInstance()->setupAutoloader($lib);
         XenForo_Application::initialize($lib, $_SERVER['DOCUMENT_ROOT']);
         XenForo_Application::disablePhpErrorHandler();
@@ -23,7 +23,7 @@ class XenBridge {
             self::_setSession();
     }
 
-    private function _setSession() {
+    private static function _setSession() {
         if (isset($_COOKIE['xf_session'])) {
 
             $xf_session = self::getDb()->fetchRow('select * from xf_session where session_id = ? and expiry_date > ?', array($_COOKIE['xf_session'], time()));
